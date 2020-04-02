@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:background="@color/colorPrimaryDark"
+    app:applyMotionScene="true"
+    app:layoutDescription="@xml/expandable_card"
+    app:motionProgress="0"
+    app:showPaths="true">
+
+    <TextView
+        android:id="@+id/cardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="InPost"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/helperText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to show more info" />
+
+    <TextView
+        android:id="@+id/cardDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Our client believed that they can make it easier for the customers to collect parcels from Parcel Lockers and from the InPost couriers."
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See more"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/colorAccent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationX="16dp"
+        android:translationY="-16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/loader" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
